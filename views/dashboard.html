@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendor Dashboard - QIU Online Ordering</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1>QIU<span>Food</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/menu">Menu</a></li>
+                    <li><a href="/cart">Cart <span class="cart-count" style="display: none;">0</span></a></li>
+                    <li><a href="/dashboard" class="active">Dashboard</a></li>
+                    <li><a href="/order-history">My Orders</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Vendor Dashboard</h1>
+        
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <h3>Total Orders</h3>
+                <div class="stat-number total-orders">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <div class="stat-number pending-orders">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Preparing</h3>
+                <div class="stat-number preparing-orders">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Ready</h3>
+                <div class="stat-number ready-orders">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Collected</h3>
+                <div class="stat-number collected-orders">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Today's Orders</h3>
+                <div class="stat-number today-orders">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Today's Revenue</h3>
+                <div class="stat-number today-revenue">RM0.00</div>
+            </div>
+        </div>
+
+        <div class="filters">
+            <label for="status-filter">Filter by Status:</label>
+            <select id="status-filter">
+                <option value="all">All Orders</option>
+                <option value="Pending">Pending</option>
+                <option value="Preparing">Preparing</option>
+                <option value="Ready">Ready</option>
+                <option value="Collected">Collected</option>
+            </select>
+        </div>
+
+        <div class="orders-table">
+            <!-- Orders will be loaded dynamically -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 QIU Online Ordering System</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

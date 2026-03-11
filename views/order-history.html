@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History - QIU Online Ordering</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1>QIU<span>Food</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/menu">Menu</a></li>
+                    <li><a href="/cart">Cart <span class="cart-count" style="display: none;">0</span></a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/order-history" class="active">My Orders</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>My Order History</h1>
+        
+        <div class="email-section">
+            <p>Please enter your email to view your order history:</p>
+            <div class="form-group">
+                <input type="email" id="history-email" placeholder="Enter your email">
+                <button class="btn" onclick="orderManager.loadOrderHistory(document.getElementById('history-email').value)">
+                    View History
+                </button>
+            </div>
+        </div>
+
+        <div class="order-history">
+            <!-- Order history will be loaded dynamically -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 QIU Online Ordering System</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>

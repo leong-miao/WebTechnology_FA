@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - QIU Online Ordering</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <h1>QIU<span>Food</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/menu">Menu</a></li>
+                    <li><a href="/cart" class="active">Cart <span class="cart-count" style="display: none;">0</span></a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/order-history">My Orders</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1>Shopping Cart</h1>
+        
+        <div class="cart-container">
+            <!-- Cart items will be loaded dynamically -->
+        </div>
+
+        <div class="checkout-section" style="display: none;">
+            <h2>Checkout</h2>
+            <form id="order-form" class="order-form">
+                <div class="form-group">
+                    <label for="customerName">Full Name:</label>
+                    <input type="text" id="customerName" name="customerName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customerEmail">Email:</label>
+                    <input type="email" id="customerEmail" name="customerEmail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customerPhone">Phone Number:</label>
+                    <input type="tel" id="customerPhone" name="customerPhone" 
+                           placeholder="0123456789" pattern="[0-9]{10,11}" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="pickupTime">Pickup Time:</label>
+                    <input type="datetime-local" id="pickupTime" name="pickupTime" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="notes">Special Notes (optional):</label>
+                    <textarea id="notes" name="notes" rows="3"></textarea>
+                </div>
+
+                <button type="submit" class="btn">Place Order</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 QIU Online Ordering System</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
